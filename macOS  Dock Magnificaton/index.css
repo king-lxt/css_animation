@@ -30,6 +30,9 @@ body {
 .dock li {
     font-size: calc(4rem * var(--scale));
     padding: 0 0.7rem;
+    position: relative;
+    top: calc((4rem * var(--scale) - 4rem) / 2 * -1);
+    transition: 15ms all ease-out;
 }
 
 .dock li.loading {

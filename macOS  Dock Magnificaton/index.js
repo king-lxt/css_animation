@@ -7,6 +7,8 @@ document.querySelectorAll('.dock li').forEach(li => {
         let item = e.target;
         let itemRect = item.getBoundingClientRect();
         let offset = Math.abs(e.clientX - itemRect.left) / itemRect.width;
+        console.log("🚀 ~ file: index.js ~ line 19 ~ document.querySelectorAll ~ itemRect.left", itemRect.left)
+
 
         let prev = item.previousElementSibling || null;
         let next = item.nextElementSibling || null;
