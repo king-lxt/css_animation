@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .pic {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: url('./pic.jpeg') no-repeat;
+            background-size: cover;
+            animation: fade-away 2.5s linear forwards;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .text {
+            position: absolute;
+            line-height: 55px;
+            color: #fff;
+            font-size: 36px;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: show 2s cubic-bezier(.74, -0.1, .86, .83) forwards;
+        }
+
+        @keyframes fade-away {
+
+            30% {
+                filter: brightness(1);
+            }
+
+            100% {
+                filter: brightness(0);
+            }
+        }
+
+        @keyframes show {
+
+            20% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pic"></div>
+        <div class="text">
+            <p>如果生活中有什么使你感到快乐，那就去做吧</p>
+            <br>
+            <p>不要管别人说什么</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端滚动左右滚动整屏</title>
+    <style>
+        body {
+            overflow-y: hidden;
+        }
+
+        .slide-wrap {
+            /* 这只滚动一整个页面 */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        .common {
+            height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            scroll-snap-align: start;
+        }
+
+        section h2 {
+            font-family: system-ui, sans-serif;
+            font-size: 2rem;
+            color: #1a1a1a;
+            font-weight: 100;
+        }
+
+        section h3 {
+            font-family: system-ui, sans-serif;
+            font-size: 2rem;
+            color: #ffffff;
+            font-weight: 100;
+        }
+
+        .slide-1 {
+            background-image: url("https://img2.baidu.com/it/u=2220420611,1081221264&fm=26&fmt=auto&gp=0.jpg");
+        }
+
+        .slide-2 {
+            background-image: url("https://img2.baidu.com/it/u=2326513140,2023727343&fm=26&fmt=auto&gp=0.jpg");
+        }
+
+        .slide-3 {
+            background-image: url("https://img0.baidu.com/it/u=1084879577,1032208978&fm=26&fmt=auto&gp=0.jpg");
+        }
+
+        .slide-4 {
+            background-image: url("https://images.unsplash.com/photo-1501791330673-603715379ded?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-wrap">
+        <div class="slide-1 common">
+            <h2>向右滑动 ></h2>
+        </div>
+        <div class="slide-2 common">
+            <h3>再滑 ></h3>
+        </div>
+        <div class="slide-3 common">
+            <h2>再滑 ></h2>
+        </div>
+        <div class="slide-4 common">
+            <h3>到底了</h3>
+        </div>
+    </div>
+</body>
+
+</html>

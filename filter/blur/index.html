@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .cards {
+            display: flex;
+        }
+
+        .card {
+            width: 120px;
+            height: 220px;
+            margin-left: 20px;
+        }
+
+        .card:before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            border-radius: 20px;
+            filter: blur(0px) opacity(1);
+            transition: filter 200ms linear, transform 200ms linear;
+        }
+
+        .card1::before {
+            background-image: url('./img/1.jpeg');
+            background-size: 120px 200px;
+            width: 120px;
+            height: 220px;
+        }
+
+        .card2::before {
+            background-image: url('./img/2.png');
+            background-size: 120px 200px;
+            width: 120px;
+            height: 220px;
+        }
+
+        .card3::before {
+            background-image: url('./img/3.jpeg');
+            background-size: 120px 200px;
+            width: 120px;
+            height: 220px;
+        }
+
+        /* 通过css选择器选出非hover的.card元素，给其伪类添加模糊、透明度和明暗度的滤镜  */
+        .cards:hover>.card:not(:hover):before {
+            filter: blur(5px) opacity(0.8) brightness(0.8);
+        }
+
+        /* 对于hover的元素，其伪类增强饱和度，尺寸放大 */
+        .card:hover:before {
+            filter: saturate(1.2);
+            transform: scale(1.05);
+        }
+
+        /* 对于hover的元素，其伪类增强饱和度，尺寸放大 */
+        .card:hover:before {
+            filter: saturate(1.2);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<ul class="cards">
+    <li class="card card1">
+        <p class="title">Flower</p>
+        <p class="content">The flowers mingle to form a blaze of color.</p>
+    </li>
+    <li class="card card2">
+        <p class="title">Sunset</p>
+        <p class="content">The sunset glow tinted the sky red.</p>
+    </li>
+    <li class="card card3">
+        <p class="title">Plain</p>
+        <p class="content">The winds came from the north, across the plains, funnelling down the valley. </p>
+    </li>
+</ul>
+
+<body>
+
+</body>
+
+</html>
